@@ -1,0 +1,62 @@
+{
+  "title": "Companion Application Configuration Schema",
+  "type": "object",
+  "properties": {
+
+    "snipe": {
+
+      "description": "Snipe-IT object",
+      "type": "object",
+      "required": ["address", "username", "password"],
+
+
+      "properties": {
+
+          "address":{
+            "description": "IP address of Snipe-IT",
+            "type": "string"
+          },
+
+          "username": {
+            "description": "Username to log in to Snipe-IT",
+            "type": "string",
+            "minLength": 1
+          },
+
+          "password": {
+            "description": "Password to log in to Snipe-IT",
+            "type": "string",
+            "minLength": 1
+          }
+      }
+    },
+
+    "dhcp": {
+
+      "description": "DHCP object",
+      "type": "object",
+      "required": ["address", "username", "password"],
+
+
+      "properties":{
+
+          "address": {
+            "description": "IP Address of DHCP server",
+            "type": "string"
+          },
+
+          "username": {
+            "description": "Username for DHCP",
+            "type": "string",
+            "minLength": 1
+          },
+
+          "password": {
+            "description": "Password for DHCP",
+            "type": "string",
+            "minLength": 1
+          }
+      }
+    }
+  }
+}
